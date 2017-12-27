@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="1.加阴影,首先导入框架#import1234self.bootomView.layer.shadowOpacity = 0.5;// 阴影透明度self.bootomView.layer.shadowColor = [UIColor grayColor].CGColor;// 阴影的颜色self.bootomView.layer.shadowRadius = 3;// 阴影扩散的范围控制self">
+<meta name="description" content="直接上代码1234567891011121314151617181920212223242526272829303132333435363738394041- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)stri">
 <meta name="keywords" content="iOS技巧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS给UIView 加阴影加圆角加边框">
-<meta property="og:url" content="http://yoursite.com/2017/12/22/iOS给UIView-加阴影加圆角加边框/index.html">
+<meta property="og:title" content="UITextField格式化输入电话和银行卡">
+<meta property="og:url" content="http://yoursite.com/2017/12/27/UITextField格式化输入电话和银行卡/index.html">
 <meta property="og:site_name" content="学无止境">
-<meta property="og:description" content="1.加阴影,首先导入框架#import1234self.bootomView.layer.shadowOpacity = 0.5;// 阴影透明度self.bootomView.layer.shadowColor = [UIColor grayColor].CGColor;// 阴影的颜色self.bootomView.layer.shadowRadius = 3;// 阴影扩散的范围控制self">
+<meta property="og:description" content="直接上代码1234567891011121314151617181920212223242526272829303132333435363738394041- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)stri">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-22T07:49:08.000Z">
+<meta property="og:updated_time" content="2017-12-27T02:25:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS给UIView 加阴影加圆角加边框">
-<meta name="twitter:description" content="1.加阴影,首先导入框架#import1234self.bootomView.layer.shadowOpacity = 0.5;// 阴影透明度self.bootomView.layer.shadowColor = [UIColor grayColor].CGColor;// 阴影的颜色self.bootomView.layer.shadowRadius = 3;// 阴影扩散的范围控制self">
+<meta name="twitter:title" content="UITextField格式化输入电话和银行卡">
+<meta name="twitter:description" content="直接上代码1234567891011121314151617181920212223242526272829303132333435363738394041- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)stri">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/22/iOS给UIView-加阴影加圆角加边框/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/27/UITextField格式化输入电话和银行卡/"/>
 
 
 
 
 
-  <title>iOS给UIView 加阴影加圆角加边框 | 学无止境</title>
+  <title>UITextField格式化输入电话和银行卡 | 学无止境</title>
   
 
 
@@ -257,7 +257,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/22/iOS给UIView-加阴影加圆角加边框/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/UITextField格式化输入电话和银行卡/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Learner YQL">
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">iOS给UIView 加阴影加圆角加边框</h1>
+          <h1 class="post-title" itemprop="name headline">UITextField格式化输入电话和银行卡</h1>
         
 
         <div class="post-meta">
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T15:44:05+08:00">
-                2017-12-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T10:23:09+08:00">
+                2017-12-27
               </time>
             
 
@@ -343,10 +343,8 @@
       
 
       
-        <p>1.加阴影,首先导入框架#import<quartzcore quartzcore=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">self.bootomView.layer.shadowOpacity = 0.5;// 阴影透明度</div><div class="line">self.bootomView.layer.shadowColor = [UIColor grayColor].CGColor;// 阴影的颜色</div><div class="line">self.bootomView.layer.shadowRadius = 3;// 阴影扩散的范围控制</div><div class="line">self.bootomView.layer.shadowOffset  = CGSizeMake(1, 1);// 阴影的范围</div></pre></td></tr></table></figure></quartzcore></p>
-<p>2.加圆角，首先保证你的imageVIew是正方形的，要不然效果不是圆的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self.userImage.layer.masksToBounds = YES;</div><div class="line">self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2;</div></pre></td></tr></table></figure></p>
-<p>如果想要有点弧度的不是地球那么圆的可以设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">self.userImage.layer.cornerRadius =5；这个值越大弧度越大</div></pre></td></tr></table></figure></p>
-<p>3.加边框<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self.goingButn.layer.borderColor = [UIColor redColor].CGColor;//边框颜色</div><div class="line">self.goingButn.layer.borderWidth = 2;//边框宽度</div></pre></td></tr></table></figure></p>
+        <p>直接上代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string &#123;</div><div class="line"></div><div class="line">    NSString *text = [textField text];</div><div class="line"></div><div class="line">    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@&quot;0123456789\b&quot;];</div><div class="line"></div><div class="line">    string = [string stringByReplacingOccurrencesOfString:@&quot; &quot; withString:@&quot;&quot;];</div><div class="line"></div><div class="line">    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) &#123;</div><div class="line">        return NO;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    text = [text stringByReplacingCharactersInRange:range withString:string];</div><div class="line">    text = [text stringByReplacingOccurrencesOfString:@&quot; &quot; withString:@&quot;&quot;];</div><div class="line"></div><div class="line">    // 如果是电话号码格式化，需要添加这三行代码</div><div class="line">    NSMutableString *temString = [NSMutableString stringWithString:text];</div><div class="line">    [temString insertString:@&quot; &quot; atIndex:0];</div><div class="line">    text = temString;</div><div class="line"></div><div class="line">    NSString *newString = @&quot;&quot;;</div><div class="line">    while (text.length &gt; 0) &#123;</div><div class="line">        NSString *subString = [text substringToIndex:MIN(text.length, 4)];</div><div class="line">        newString = [newString stringByAppendingString:subString];</div><div class="line">        if (subString.length == 4) &#123;</div><div class="line">            newString = [newString stringByAppendingString:@&quot; &quot;];</div><div class="line">        &#125;</div><div class="line">        text = [text substringFromIndex:MIN(text.length, 4)];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];</div><div class="line">    </div><div class="line">    if (newString.length &gt;= 14) &#123;</div><div class="line">        return NO;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    [textField setText:newString];</div><div class="line"></div><div class="line">    return NO;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码是极好的：不但一个个输入字符时没有问题，而且可以实现，复制粘贴过来后再实现格式化</p>
 
       
     </div>
@@ -389,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/22/iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏/" rel="next" title="iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏">
-                <i class="fa fa-chevron-left"></i> iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏
+              <a href="/2017/12/27/UITableView分割线的相关处理/" rel="next" title="UITableView分割线的相关处理">
+                <i class="fa fa-chevron-left"></i> UITableView分割线的相关处理
               </a>
             
           </div>
@@ -398,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/27/UITableView分割线的相关处理/" rel="prev" title="UITableView分割线的相关处理">
-                UITableView分割线的相关处理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
