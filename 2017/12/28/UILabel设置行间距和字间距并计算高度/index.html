@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="直接上代码1234567891011121314151617181920212223242526272829303132333435363738394041- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)stri">
+<meta name="description" content="设置行间距12345678910111213141516171819202122232425262728// 描述NSMutableAttributedString *aboutMutableAttributedstring = [[NSMutableAttributedString alloc] initWithString:kApp_About];NSMutableParagraphStyle">
 <meta name="keywords" content="iOS技巧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UITextField格式化输入电话和银行卡">
-<meta property="og:url" content="http://yoursite.com/2017/12/27/UITextField格式化输入电话和银行卡/index.html">
+<meta property="og:title" content="UILabel设置行间距和字间距并计算高度">
+<meta property="og:url" content="http://yoursite.com/2017/12/28/UILabel设置行间距和字间距并计算高度/index.html">
 <meta property="og:site_name" content="学无止境">
-<meta property="og:description" content="直接上代码1234567891011121314151617181920212223242526272829303132333435363738394041- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)stri">
+<meta property="og:description" content="设置行间距12345678910111213141516171819202122232425262728// 描述NSMutableAttributedString *aboutMutableAttributedstring = [[NSMutableAttributedString alloc] initWithString:kApp_About];NSMutableParagraphStyle">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-27T02:25:30.000Z">
+<meta property="og:updated_time" content="2017-12-28T08:19:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UITextField格式化输入电话和银行卡">
-<meta name="twitter:description" content="直接上代码1234567891011121314151617181920212223242526272829303132333435363738394041- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)stri">
+<meta name="twitter:title" content="UILabel设置行间距和字间距并计算高度">
+<meta name="twitter:description" content="设置行间距12345678910111213141516171819202122232425262728// 描述NSMutableAttributedString *aboutMutableAttributedstring = [[NSMutableAttributedString alloc] initWithString:kApp_About];NSMutableParagraphStyle">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/27/UITextField格式化输入电话和银行卡/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/28/UILabel设置行间距和字间距并计算高度/"/>
 
 
 
 
 
-  <title>UITextField格式化输入电话和银行卡 | 学无止境</title>
+  <title>UILabel设置行间距和字间距并计算高度 | 学无止境</title>
   
 
 
@@ -257,7 +257,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/UITextField格式化输入电话和银行卡/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/28/UILabel设置行间距和字间距并计算高度/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Learner YQL">
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">UITextField格式化输入电话和银行卡</h1>
+          <h1 class="post-title" itemprop="name headline">UILabel设置行间距和字间距并计算高度</h1>
         
 
         <div class="post-meta">
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T10:23:09+08:00">
-                2017-12-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-28T16:06:04+08:00">
+                2017-12-28
               </time>
             
 
@@ -343,9 +343,10 @@
       
 
       
-        <p>直接上代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string &#123;</div><div class="line"></div><div class="line">    NSString *text = [textField text];</div><div class="line"></div><div class="line">    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@&quot;0123456789\b&quot;];</div><div class="line"></div><div class="line">    string = [string stringByReplacingOccurrencesOfString:@&quot; &quot; withString:@&quot;&quot;];</div><div class="line"></div><div class="line">    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) &#123;</div><div class="line">        return NO;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    text = [text stringByReplacingCharactersInRange:range withString:string];</div><div class="line">    text = [text stringByReplacingOccurrencesOfString:@&quot; &quot; withString:@&quot;&quot;];</div><div class="line"></div><div class="line">    // 如果是电话号码格式化，需要添加这三行代码</div><div class="line">    NSMutableString *temString = [NSMutableString stringWithString:text];</div><div class="line">    [temString insertString:@&quot; &quot; atIndex:0];</div><div class="line">    text = temString;</div><div class="line"></div><div class="line">    NSString *newString = @&quot;&quot;;</div><div class="line">    while (text.length &gt; 0) &#123;</div><div class="line">        NSString *subString = [text substringToIndex:MIN(text.length, 4)];</div><div class="line">        newString = [newString stringByAppendingString:subString];</div><div class="line">        if (subString.length == 4) &#123;</div><div class="line">            newString = [newString stringByAppendingString:@&quot; &quot;];</div><div class="line">        &#125;</div><div class="line">        text = [text substringFromIndex:MIN(text.length, 4)];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];</div><div class="line">    </div><div class="line">    if (newString.length &gt;= 14) &#123;</div><div class="line">        return NO;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    [textField setText:newString];</div><div class="line"></div><div class="line">    return NO;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这段代码是极好的：不但一个个输入字符时没有问题，而且可以实现，复制粘贴过来后再实现格式化</p>
-
+        <p>设置行间距<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// 描述</div><div class="line">NSMutableAttributedString *aboutMutableAttributedstring = [[NSMutableAttributedString alloc] initWithString:kApp_About];</div><div class="line">NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];</div><div class="line">//字体的行间距</div><div class="line">paragraphStyle.lineSpacing = 10;</div><div class="line">//首行缩进</div><div class="line">paragraphStyle.firstLineHeadIndent = 10.0f;</div><div class="line">//（两端对齐的）文本对齐方式：（左，中，右，两端对齐，自然）</div><div class="line">paragraphStyle.alignment = NSTextAlignmentLeft;</div><div class="line">//结尾部分的内容以……方式省略 ( &quot;...wxyz&quot; ,&quot;abcd...&quot; ,&quot;ab...yz&quot;)</div><div class="line">paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;</div><div class="line">//整体缩进(首行除外)</div><div class="line">paragraphStyle.headIndent = 10;</div><div class="line">//设置尾部缩进后就出问题</div><div class="line">paragraphStyle.tailIndent = 2;//尾部缩进</div><div class="line">paragraphStyle.minimumLineHeight = 10;//最低行高</div><div class="line">paragraphStyle.maximumLineHeight = 20;//最大行高</div><div class="line">paragraphStyle.paragraphSpacing = 15;//段与段之间的间距</div><div class="line">paragraphStyle.paragraphSpacingBefore = 22.0f;//段首行空白空间/* Distance between the bottom of the previous paragraph (or the end of its paragraphSpacing, if any) and the top of this paragraph. */</div><div class="line">paragraphStyle.baseWritingDirection = NSWritingDirectionLeftToRight;//从左到右的书写方向（一共➡️⬇️⬅️三种）</div><div class="line">paragraphStyle.lineHeightMultiple = 15;/* Natural line height is multiplied by this factor (if positive) before being constrained by minimum and maximum line height. */</div><div class="line">paragraphStyle.hyphenationFactor = 1;//连字属性 在iOS，唯一支持的值分别为0和1</div><div class="line">//添加段落属性</div><div class="line">[aboutMutableAttributedstring addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, aboutMutableAttributedstring.length)];</div><div class="line">//调整字间距</div><div class="line">[aboutMutableAttributedstring addAttribute:NSKernAttributeName value:@(0.5) range:NSMakeRange(0, aboutMutableAttributedstring.length)];</div><div class="line">//调整文本的基线位置</div><div class="line">[videoTextMutableAttributedstring addAttribute:NSBaselineOffsetAttributeName value:@(-2.5) range:NSMakeRange(0, videoTextMutableAttributedstring.length)];</div></pre></td></tr></table></figure></p>
+<p>计算Label高度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CGRect rect = [workDescriptionMutableAttributedstring boundingRectWithSize:CGSizeMake(kScreenWidth-48, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];</div><div class="line">return ceilf(rect.size.height);</div></pre></td></tr></table></figure></p>
+<p>UILabel的其它属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//超出label边界文字的截取方式</div><div class="line">label1.lineBreakMode = UILineBreakModeTailTruncation;</div><div class="line"></div><div class="line">//截取方式有以下6种</div><div class="line">typedef enum &#123;</div><div class="line"></div><div class="line"> UILineBreakModeWordWrap = 0, 以空格为边界，保留整个单词</div><div class="line"></div><div class="line"> UILineBreakModeCharacterWrap, 保留整个字符</div><div class="line"></div><div class="line"> UILineBreakModeClip, 到边界为止</div><div class="line"></div><div class="line"> UILineBreakModeHeadTruncation, 省略开始，以……代替</div><div class="line"></div><div class="line"> UILineBreakModeTailTruncation, 省略结尾，以……代替</div><div class="line"></div><div class="line"> UILineBreakModeMiddleTruncation,省略中间，以……代替，多行时作用于最后一行</div><div class="line"></div><div class="line"></div><div class="line">&#125; UILineBreakMode;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//baselineAdjustment这个值控制文本的基线位置，只有文本行数为1是有效</div><div class="line"></div><div class="line">label1.baselineAdjustment = UIBaselineAdjustmentAlignCenters;</div><div class="line"></div><div class="line">//有三种方式</div><div class="line">typedef enum &#123;</div><div class="line"></div><div class="line"> UIBaselineAdjustmentAlignBaselines = 0, 默认值文本最上端于label中线对齐</div><div class="line"></div><div class="line"> UIBaselineAdjustmentAlignCenters,//文本中线于label中线对齐</div><div class="line"></div><div class="line">UIBaselineAdjustmentNone,//文本最低端与label中线对齐</div><div class="line"></div><div class="line">&#125; UIBaselineAdjustment;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -387,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/27/UITableView分割线的相关处理/" rel="next" title="UITableView分割线的相关处理">
-                <i class="fa fa-chevron-left"></i> UITableView分割线的相关处理
+              <a href="/2017/12/27/UITextField格式化输入电话和银行卡/" rel="next" title="UITextField格式化输入电话和银行卡">
+                <i class="fa fa-chevron-left"></i> UITextField格式化输入电话和银行卡
               </a>
             
           </div>
@@ -396,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/28/UILabel设置行间距和字间距并计算高度/" rel="prev" title="UILabel设置行间距和字间距并计算高度">
-                UILabel设置行间距和字间距并计算高度 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
