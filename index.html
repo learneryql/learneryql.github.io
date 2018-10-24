@@ -1,17 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
 
 
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -36,36 +56,7 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -74,32 +65,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
-
-
-
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="学无止境">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="学无止境">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学无止境">
+
+
+
 
 
 
@@ -107,14 +91,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    scheme: 'Gemini',
+    version: '6.4.2',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -126,12 +110,36 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
+  
 
 
 
+
+  <meta name="description" content="不知所云">
+<meta property="og:type" content="website">
+<meta property="og:title" content="学无止境">
+<meta property="og:url" content="https://learneryql.github.io/index.html">
+<meta property="og:site_name" content="学无止境">
+<meta property="og:description" content="不知所云">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学无止境">
+<meta name="twitter:description" content="不知所云">
+
+
+
+
+
+
+  <link rel="canonical" href="https://learneryql.github.io/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>学无止境</title>
   
@@ -144,14 +152,36 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-
-
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -159,9 +189,12 @@
   
 
   <div class="container sidebar-position-right 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
+
+    <!-- GitHub Start -->
+    <a href="https://github.com/learneryql" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <!-- GitHub End -->
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -169,19 +202,21 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">学无止境</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">每天进步一点点！</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -189,45 +224,50 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -235,12 +275,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -253,12 +304,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/28/UILabel设置行间距和字间距并计算高度/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2018/10/24/Hexo设置主题以及Next主题个性设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -273,11 +330,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/28/UILabel设置行间距和字间距并计算高度/" itemprop="url">UILabel设置行间距和字间距并计算高度</a></h1>
+                <a class="post-title-link" href="/2018/10/24/Hexo设置主题以及Next主题个性设置/" itemprop="url">
+                  Hexo设置主题以及Next主题个性设置
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -285,13 +352,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-28T16:06:04+08:00">
-                2017-12-28
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-24 17:06:01 / 修改时间：20:13:29" itemprop="dateCreated datePublished" datetime="2018-10-24T17:06:01+08:00">2018-10-24</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -307,11 +379,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具使用/" itemprop="url" rel="index"><span itemprop="name">工具使用</span></a></span>
 
                 
                 
@@ -336,6 +404,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -344,26 +415,78 @@
       
         
           
-            <p>设置行间距<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// 描述</div><div class="line">NSMutableAttributedString *aboutMutableAttributedstring = [[NSMutableAttributedString alloc] initWithString:kApp_About];</div><div class="line">NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];</div><div class="line">//字体的行间距</div><div class="line">paragraphStyle.lineSpacing = 10;</div><div class="line">//首行缩进</div><div class="line">paragraphStyle.firstLineHeadIndent = 10.0f;</div><div class="line">//（两端对齐的）文本对齐方式：（左，中，右，两端对齐，自然）</div><div class="line">paragraphStyle.alignment = NSTextAlignmentLeft;</div><div class="line">//结尾部分的内容以……方式省略 ( &quot;...wxyz&quot; ,&quot;abcd...&quot; ,&quot;ab...yz&quot;)</div><div class="line">paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;</div><div class="line">//整体缩进(首行除外)</div><div class="line">paragraphStyle.headIndent = 10;</div><div class="line">//设置尾部缩进后就出问题</div><div class="line">paragraphStyle.tailIndent = 2;//尾部缩进</div><div class="line">paragraphStyle.minimumLineHeight = 10;//最低行高</div><div class="line">paragraphStyle.maximumLineHeight = 20;//最大行高</div><div class="line">paragraphStyle.paragraphSpacing = 15;//段与段之间的间距</div><div class="line">paragraphStyle.paragraphSpacingBefore = 22.0f;//段首行空白空间/* Distance between the bottom of the previous paragraph (or the end of its paragraphSpacing, if any) and the top of this paragraph. */</div><div class="line">paragraphStyle.baseWritingDirection = NSWritingDirectionLeftToRight;//从左到右的书写方向（一共➡️⬇️⬅️三种）</div><div class="line">paragraphStyle.lineHeightMultiple = 15;/* Natural line height is multiplied by this factor (if positive) before being constrained by minimum and maximum line height. */</div><div class="line">paragraphStyle.hyphenationFactor = 1;//连字属性 在iOS，唯一支持的值分别为0和1</div><div class="line">//添加段落属性</div><div class="line">[aboutMutableAttributedstring addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, aboutMutableAttributedstring.length)];</div><div class="line">//调整字间距</div><div class="line">[aboutMutableAttributedstring addAttribute:NSKernAttributeName value:@(0.5) range:NSMakeRange(0, aboutMutableAttributedstring.length)];</div><div class="line">//调整文本的基线位置</div><div class="line">[videoTextMutableAttributedstring addAttribute:NSBaselineOffsetAttributeName value:@(-2.5) range:NSMakeRange(0, videoTextMutableAttributedstring.length)];</div></pre></td></tr></table></figure></p>
-<p>计算Label高度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CGRect rect = [workDescriptionMutableAttributedstring boundingRectWithSize:CGSizeMake(kScreenWidth-48, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];</div><div class="line">return ceilf(rect.size.height);</div></pre></td></tr></table></figure></p>
-<p>UILabel的其它属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//超出label边界文字的截取方式</div><div class="line">label1.lineBreakMode = UILineBreakModeTailTruncation;</div><div class="line"></div><div class="line">//截取方式有以下6种</div><div class="line">typedef enum &#123;</div><div class="line"></div><div class="line"> UILineBreakModeWordWrap = 0, 以空格为边界，保留整个单词</div><div class="line"></div><div class="line"> UILineBreakModeCharacterWrap, 保留整个字符</div><div class="line"></div><div class="line"> UILineBreakModeClip, 到边界为止</div><div class="line"></div><div class="line"> UILineBreakModeHeadTruncation, 省略开始，以……代替</div><div class="line"></div><div class="line"> UILineBreakModeTailTruncation, 省略结尾，以……代替</div><div class="line"></div><div class="line"> UILineBreakModeMiddleTruncation,省略中间，以……代替，多行时作用于最后一行</div><div class="line"></div><div class="line"></div><div class="line">&#125; UILineBreakMode;</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//baselineAdjustment这个值控制文本的基线位置，只有文本行数为1是有效</div><div class="line"></div><div class="line">label1.baselineAdjustment = UIBaselineAdjustmentAlignCenters;</div><div class="line"></div><div class="line">//有三种方式</div><div class="line">typedef enum &#123;</div><div class="line"></div><div class="line"> UIBaselineAdjustmentAlignBaselines = 0, 默认值文本最上端于label中线对齐</div><div class="line"></div><div class="line"> UIBaselineAdjustmentAlignCenters,//文本中线于label中线对齐</div><div class="line"></div><div class="line">UIBaselineAdjustmentNone,//文本最低端与label中线对齐</div><div class="line"></div><div class="line">&#125; UIBaselineAdjustment;</div></pre></td></tr></table></figure>
+            <h2 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h2><p>之前的一篇文章介绍怎么搭建一个GitHub静态博客网站，还没有搭建的可以戳<a href="https://learneryql.github.io/2017/07/06/%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E4%B9%8BHEXO/">这里</a>，可是大家有没有发现，搭建的Hexo博客使用的是默认主题，而且不咋好看，跟那些大神们的个人博客相比，还差了很多，不过不要紧，看完这篇文章，你也可以拥有那些炫酷吊炸天的效果。废话少说，那就直接开始吧。</p>
+<h2 id="2、设置主题"><a href="#2、设置主题" class="headerlink" title="2、设置主题"></a>2、设置主题</h2><p>Hexo给我们提供了很多的主题供我们选择，读者可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>查看你喜欢的主题，我选来选去选了一个比较经典的Next主题。下面就已设置Next主题为例来看看怎么安装和设置主题。</p>
+<h5 id="2-1、安装主题"><a href="#2-1、安装主题" class="headerlink" title="2.1、安装主题"></a>2.1、安装主题</h5><p>首先你需要打开你上次生成的Hexo目录，然后右键打开Git Bash here,输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
+<p>如果你选择的是别的主题的话，只需要把URL换一下，和themes/next换成themes/你的主题名称 (themes/next是安装目录，themes/next代表安装在你的Hexo目录下的themes目录下的next文件夹下)</p>
+<h5 id="2-2、设置主题"><a href="#2-2、设置主题" class="headerlink" title="2.2、设置主题"></a>2.2、设置主题</h5><p>这样就安装完了，不过不要以为这样就可以了哦，我们还需要启用Next主题，所以需要到站点配置文件里去设置一把，找到 theme 字段，并将其值更改为 next。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure></p>
+<p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，所以一般在描述的时候，将前者称为 站点配置文件， 后者称为 主题配置文件。</p>
+<h3 id="2-3、验证主题"><a href="#2-3、验证主题" class="headerlink" title="2.3、验证主题"></a>2.3、验证主题</h3><p>设置完了，没有看到效果总是不放心对不对，那就先在本地预览一下吧。<br>先输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g &amp;&amp; hexo s</div></pre></td></tr></table></figure></p>
+<p>接着你就可以打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000/</a>验证效果了。是不是已经有效果了？<br>到此为止，你已经成功安装并启用了 NexT 主题。</p>
+<h2 id="3、修改Hexo-站点配置文件"><a href="#3、修改Hexo-站点配置文件" class="headerlink" title="3、修改Hexo 站点配置文件"></a>3、修改Hexo 站点配置文件</h2><p>我们找到上次生成的Hexo目录，找到站点配置文件_config.yml，可以用notepad++或者sublime Text打开。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># Hexo Configuration</div><div class="line">## Docs: https://hexo.io/docs/configuration.html</div><div class="line">## Source: https://github.com/hexojs/hexo/</div><div class="line"># Site 网站</div><div class="line">title: 学无止境   #网站标题</div><div class="line">subtitle: 每天进步一点点！   #网站副标题</div><div class="line">description: 不知所云  #网站描述</div><div class="line">author: learneryql   #博主的名字</div><div class="line">language: zh-CN  #网站使用的语言</div><div class="line">timezone:      #网站时区。Hexo 默认使用您电脑的时区</div></pre></td></tr></table></figure></p>
+<p>侧边栏头像设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">avatar: /images/avatar.gif</div></pre></td></tr></table></figure></p>
+<p>先对网站的一些设置进行设置，至于其他的设置，等说到再贴。(因为整个文件确实有点长。。。)</p>
+<h2 id="4、Hexo-主题配置文件"><a href="#4、Hexo-主题配置文件" class="headerlink" title="4、Hexo 主题配置文件"></a>4、Hexo 主题配置文件</h2><p>其实这个文件的配置才是重点，因为你们想要的吊炸天的效果差不多都与这个文件有关。<br>打开Hexo目录/themes/next/_config.yml文件。</p>
+<h5 id="4-1、开启侧边栏社交链接"><a href="#4-1、开启侧边栏社交链接" class="headerlink" title="4.1、开启侧边栏社交链接"></a>4.1、开启侧边栏社交链接</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># Social links</div><div class="line">social:</div><div class="line">  GitHub: https://github.com/learneryql || github</div><div class="line">  Twitter: https://twitter.com/learneryql || twitter</div><div class="line">  # 等等</div><div class="line"></div><div class="line">social_icons:</div><div class="line">  enable: true</div><div class="line">  # Icon Mappings.</div><div class="line">  GitHub: github</div><div class="line">  Twitter: twitter</div></pre></td></tr></table></figure>
+<p>反正我就只设置了这两个，你们有多少可以设置多少哈。。。</p>
+<h5 id="4-2、开启打赏功能"><a href="#4-2、开启打赏功能" class="headerlink" title="4.2、开启打赏功能"></a>4.2、开启打赏功能</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！</div><div class="line">wechatpay: 你的微信收款码链接</div><div class="line">alipay: 你的支付宝收款码链接</div></pre></td></tr></table></figure>
+<h5 id="4-3、开启友情链接"><a href="#4-3、开启友情链接" class="headerlink" title="4.3、开启友情链接"></a>4.3、开启友情链接</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">links_title: Links</div><div class="line">links:</div><div class="line">  MacTalk: http://yourfriend.com/</div><div class="line">  Title: http://yourfriend.com/</div></pre></td></tr></table></figure>
+<h5 id="4-4、开启订阅微信公众号"><a href="#4-4、开启订阅微信公众号" class="headerlink" title="4.4、开启订阅微信公众号"></a>4.4、开启订阅微信公众号</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wechat_subscriber:</div><div class="line">enabled: true</div><div class="line">qcode: /uploads/wechat-qcode.jpg</div><div class="line">description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</div></pre></td></tr></table></figure>
+<h5 id="4-5、选择-Scheme"><a href="#4-5、选择-Scheme" class="headerlink" title="4.5、选择 Scheme"></a>4.5、选择 Scheme</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Schemes</div><div class="line">#scheme: Muse</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div><div class="line">#scheme: Gemini</div></pre></td></tr></table></figure>
+<p>更多请参考next<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">主题文档</a></p>
+<h2 id="5、设置侧边栏设置圆形可旋转头像"><a href="#5、设置侧边栏设置圆形可旋转头像" class="headerlink" title="5、设置侧边栏设置圆形可旋转头像"></a>5、设置侧边栏设置圆形可旋转头像</h2><p>找到生成的Hexo目录\themes\next\source\css_common\components\sidebar下的sidebar-author.styl，将里面的css样式内容全部替换为：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.site-author-image</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">  <span class="attribute">padding</span>: $site-author-image-padding;</div><div class="line">  <span class="attribute">max-width</span>: $site-author-image-width;</div><div class="line">  <span class="attribute">height</span>: $site-author-image-height;</div><div class="line">  <span class="attribute">border</span>: $site-author-image-border-width solid $site-author-image-border-color;</div><div class="line"></div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">transition</span>: <span class="number">1.4s</span> all;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.site-author-image</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(360deg);</div><div class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(360deg);</div><div class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(360deg);</div><div class="line">    <span class="attribute">-transform</span>: <span class="built_in">rotate</span>(360deg);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.site-author-name</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: $site-author-name-margin;</div><div class="line">  <span class="attribute">text-align</span>: $site-author-name-align;</div><div class="line">  <span class="attribute">color</span>: $site-author-name-color;</div><div class="line">  <span class="attribute">font-weight</span>: $site-author-name-weight;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.site-description</span> &#123;</div><div class="line">  <span class="attribute">margin-top</span>: $site-description-margin-top;</div><div class="line">  <span class="attribute">text-align</span>: $site-description-align;</div><div class="line">  <span class="attribute">font-size</span>: $site-description-font-size;</div><div class="line">  <span class="attribute">color</span>: $site-description-color;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="6、设置首页不显示全文-只显示预览"><a href="#6、设置首页不显示全文-只显示预览" class="headerlink" title="6、设置首页不显示全文(只显示预览)"></a>6、设置首页不显示全文(只显示预览)</h2><p>打开主题配置文件_config.yml，ctrl + F搜索找到”auto_excerpt”，可以看见<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommand.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</div><div class="line">auto_excerpt:</div><div class="line">enable: false</div><div class="line">length: 150</div></pre></td></tr></table></figure></p>
+<p>把enable改为对应的false改为true，length就是预览显示的文字长度，你可以根据你的需要进行更改，然后重新部署，再进主页，你就发现你首页的文章多了一个阅读全文的按钮。</p>
+<h2 id="7、添加动态背景"><a href="#7、添加动态背景" class="headerlink" title="7、添加动态背景"></a>7、添加动态背景</h2><p>先上张图<br><img src="/images/dongtai.gif" alt="动态背景"><br>记得第一次在别人的博客里看到这个动态背景的时候觉得好好玩，当时觉得自己可以玩一天，哈哈。。。现在你只需要稍微设置一下，你的博客也能马上拥有这个效果咯。<br>有两种方法</p>
+<ol>
+<li><p>打开生成的Hexo目录\themes\next/layout/_layout.swig文件，<br> 在 &lt; /body&gt;上面添加代码(注意不要放在&lt; /head&gt;的后面)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.canvas_nest %&#125;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<p> 打开主题配置文件，在里面添加如下代码：(可以放在最后面)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># --------------------------------------------------------------</div><div class="line"># background settings</div><div class="line"># --------------------------------------------------------------</div><div class="line"># add canvas-nest effect</div><div class="line"># see detail from https://github.com/hustcc/canvas-nest.js</div><div class="line">canvas_nest: true</div></pre></td></tr></table></figure>
+<p> 就这么简单，再运行 hexo clean，然后运行 hexo g,然后运行 hexo s，最后打开浏览器在浏览器的地址栏输入 localhost:4000 就能看到效果了。是不是很好玩。。。<br> 什么？线条太多了？没事，来看看怎么让线条变少点<br> 在上一步修改的主题配置文件中，把刚才的那些代码改成下面这样：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.canvas_nest %&#125;</div><div class="line">&lt;script type=&quot;text/javascript&quot;</div><div class="line">color=&quot;0,0,255&quot; opacity=&apos;0.7&apos; zIndex=&quot;-2&quot; count=&quot;99&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&#123;% e</div></pre></td></tr></table></figure>
+<p> 怎么样，是不是少了很多了？没事，你开心就好(^▽^)</p>
+</li>
+<li><p>还有另外一种方式来设置动态背景</p>
+<blockquote>
+<p>Step1 → 进入next主题目录下:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cd themes/next</div><div class="line">$ ls</div><div class="line">bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  source  test</div></pre></td></tr></table></figure>
+<p>Step 2 → 从git上获取代码:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest</div></pre></td></tr></table></figure>
+<p>Step 3 → 修改配置文件_config.yml:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">canvas_nest: true</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>配置项说明<br>color ：线条颜色, 默认: ‘0,0,0’；三个数字分别为(R,G,B)<br>opacity: 线条透明度（0~1）, 默认: 0.5<br>count: 线条的总数量, 默认: 150<br>zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1</p>
+<h2 id="8、分类和标签设置"><a href="#8、分类和标签设置" class="headerlink" title="8、分类和标签设置"></a>8、分类和标签设置</h2><p>这里主要说的是在编写文章的时候，怎么给文章设置标签和分类。<br>首先通过<strong>hexo n “name”</strong>命令来新建一个页面，在source/_posts目录下找到刚才新建的name.md文件，用notepad++或者sublime text打开。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: name</div><div class="line">date: 2018-10-24 11:15:00 </div><div class="line">tags: </div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>页面默认就是长这样的，可以编辑标题、日期、标签和内容，但是没有分类的选项。我们可以手动加入categories:项,但是下次创建新的页面的时候还是没有，所以我们直接打开scaffolds/post.md文件，在tages:上面加入categories:,保存后，重新执行hexo n ‘name’命令，会发现新建的页面里有categories:项了。<br>scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。</p>
+<h3 id="8-1、设置分类列表"><a href="#8-1、设置分类列表" class="headerlink" title="8.1、设置分类列表"></a>8.1、设置分类列表</h3><p>在我们编辑文章的时候，直接在categories:项填写属于哪个分类，但如果分类是中文的时候，路径也会包含中文。<br>比如分类我们设置的是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">categories: 技巧教程</div></pre></td></tr></table></figure></p>
+<p>那在生成页面后，分类列表就会出现开车这个选项，他的访问路径是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*/categories/技巧教程</div></pre></td></tr></table></figure></p>
+<p>我们都知道，有时候中文路径可能会出现一些奇奇怪怪的问题，所以我们需要路径名和分类名分别设置。<br>打开站点配置文件_config.yml，找到如下位置做更改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Category &amp; Tag</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">	技巧教程: jiqiaojiaocheng</div><div class="line">	工具使用: gongjushiyong</div><div class="line">tag_map:</div></pre></td></tr></table></figure></p>
+<p>在这里category_map:是设置分类的地方，每行一个分类，冒号前面是分类名称，后面是访问路径。<br>可以提前在这里设置好一些分类，当编辑的文章填写了对应的分类名时，就会自动的按照对应的路径来访问。</p>
+<h3 id="8-2、设置标签"><a href="#8-2、设置标签" class="headerlink" title="8.2、设置标签"></a>8.2、设置标签</h3><p>在编辑文章的时候，tags:后面是设置标签的地方，如果有多个标签的话，可以用下面两种办法来设置：<br>第一种：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tages: [标签1,标签2,...标签n]</div></pre></td></tr></table></figure></p>
+<p>第二种：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> tages: </div><div class="line">- 标签1</div><div class="line">- 标签2</div><div class="line">...</div><div class="line">- 标签n</div></pre></td></tr></table></figure></p>
+<h2 id="9、在右上角添加fork-me-on-github"><a href="#9、在右上角添加fork-me-on-github" class="headerlink" title="9、在右上角添加fork me on github"></a>9、在右上角添加fork me on github</h2><p>点击 <a href="https://blog.github.com/2008-12-19-github-ribbons/" target="_blank" rel="noopener">这里</a> 或者<a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">这里</a> 挑选自己喜欢的样式，并复制代码。然后把刚才复制的代码粘贴到 themes\next\layout_layout.swig 文件中(放在<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"headband"</span>&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>的下面)，并把href改为你的github地址。<br>我的代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!-- &#123;#在头部右上角实现fork me on github#&#125; --&gt;</div><div class="line">&lt;a href="https://github.com/learneryql" class="github-corner" aria-label="View source on Github" target="_blank"&gt;&lt;svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"&gt;&lt;path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"&gt;&lt;/path&gt;&lt;path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"&gt;&lt;/path&gt;&lt;path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;style&gt;.github-corner:hover .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;@keyframes octocat-wave&#123;0%,100%&#123;transform:rotate(0)&#125;20%,60%&#123;transform:rotate(-25deg)&#125;40%,80%&#123;transform:rotate(10deg)&#125;&#125;@media (max-width:500px)&#123;.github-corner:hover .octo-arm&#123;animation:none&#125;.github-corner .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;&#125;&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="9、最后"><a href="#9、最后" class="headerlink" title="9、最后"></a>9、最后</h2><p>Hexo和Next主题的一些常用设置差不多就是这么多了，这些是今天在设置主题时用到的，记录一下，真的感谢那些大神们的分享，也希望我的文章能帮到你。</p>
+
           
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -377,6 +500,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -389,12 +516,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/UITextField格式化输入电话和银行卡/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2018/10/24/计算机网络/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -409,11 +542,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/27/UITextField格式化输入电话和银行卡/" itemprop="url">UITextField格式化输入电话和银行卡</a></h1>
+                <a class="post-title-link" href="/2018/10/24/计算机网络/" itemprop="url">
+                  计算机网络
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -421,13 +564,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T10:23:09+08:00">
-                2017-12-27
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-24 13:38:11 / 修改时间：16:59:58" itemprop="dateCreated datePublished" datetime="2018-10-24T13:38:11+08:00">2018-10-24</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -443,11 +591,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
 
                 
                 
@@ -472,6 +616,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -480,7 +627,352 @@
       
         
           
-            <p>直接上代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string &#123;</div><div class="line"></div><div class="line">    NSString *text = [textField text];</div><div class="line"></div><div class="line">    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@&quot;0123456789\b&quot;];</div><div class="line"></div><div class="line">    string = [string stringByReplacingOccurrencesOfString:@&quot; &quot; withString:@&quot;&quot;];</div><div class="line"></div><div class="line">    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) &#123;</div><div class="line">        return NO;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    text = [text stringByReplacingCharactersInRange:range withString:string];</div><div class="line">    text = [text stringByReplacingOccurrencesOfString:@&quot; &quot; withString:@&quot;&quot;];</div><div class="line"></div><div class="line">    // 如果是电话号码格式化，需要添加这三行代码</div><div class="line">    NSMutableString *temString = [NSMutableString stringWithString:text];</div><div class="line">    [temString insertString:@&quot; &quot; atIndex:0];</div><div class="line">    text = temString;</div><div class="line"></div><div class="line">    NSString *newString = @&quot;&quot;;</div><div class="line">    while (text.length &gt; 0) &#123;</div><div class="line">        NSString *subString = [text substringToIndex:MIN(text.length, 4)];</div><div class="line">        newString = [newString stringByAppendingString:subString];</div><div class="line">        if (subString.length == 4) &#123;</div><div class="line">            newString = [newString stringByAppendingString:@&quot; &quot;];</div><div class="line">        &#125;</div><div class="line">        text = [text substringFromIndex:MIN(text.length, 4)];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];</div><div class="line">    </div><div class="line">    if (newString.length &gt;= 14) &#123;</div><div class="line">        return NO;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    [textField setText:newString];</div><div class="line"></div><div class="line">    return NO;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+            <p>今天被定义为中国程序员节，先出道题吧 ^_^ :</p>
+<p><img src="/images/20181024.jpeg" alt="1024程序员节"></p>
+<p>进入正题，计算机网络结构图：</p>
+<p><img src="/images/pc_computer_network.png" alt="网络拓扑"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/28/UILabel设置行间距和字间距并计算高度/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学无止境">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/28/UILabel设置行间距和字间距并计算高度/" itemprop="url">
+                  UILabel设置行间距和字间距并计算高度
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-28 16:06:04" itemprop="dateCreated datePublished" datetime="2017-12-28T16:06:04+08:00">2017-12-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-24 17:02:30" itemprop="dateModified" datetime="2018-10-24T17:02:30+08:00">2018-10-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>设置行间距<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 描述</span></div><div class="line"><span class="built_in">NSMutableAttributedString</span> *aboutMutableAttributedstring = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:kApp_About];</div><div class="line"><span class="built_in">NSMutableParagraphStyle</span> *paragraphStyle = [[<span class="built_in">NSMutableParagraphStyle</span> alloc] init];</div><div class="line"><span class="comment">//字体的行间距</span></div><div class="line">paragraphStyle.lineSpacing = <span class="number">10</span>;</div><div class="line"><span class="comment">//首行缩进</span></div><div class="line">paragraphStyle.firstLineHeadIndent = <span class="number">10.0</span>f;</div><div class="line"><span class="comment">//（两端对齐的）文本对齐方式：（左，中，右，两端对齐，自然）</span></div><div class="line">paragraphStyle.alignment = <span class="built_in">NSTextAlignmentLeft</span>;</div><div class="line"><span class="comment">//结尾部分的内容以……方式省略 ( "...wxyz" ,"abcd..." ,"ab...yz")</span></div><div class="line">paragraphStyle.lineBreakMode = <span class="built_in">NSLineBreakByTruncatingTail</span>;</div><div class="line"><span class="comment">//整体缩进(首行除外)</span></div><div class="line">paragraphStyle.headIndent = <span class="number">10</span>;</div><div class="line"><span class="comment">//设置尾部缩进后就出问题</span></div><div class="line">paragraphStyle.tailIndent = <span class="number">2</span>;<span class="comment">//尾部缩进</span></div><div class="line">paragraphStyle.minimumLineHeight = <span class="number">10</span>;<span class="comment">//最低行高</span></div><div class="line">paragraphStyle.maximumLineHeight = <span class="number">20</span>;<span class="comment">//最大行高</span></div><div class="line">paragraphStyle.paragraphSpacing = <span class="number">15</span>;<span class="comment">//段与段之间的间距</span></div><div class="line">paragraphStyle.paragraphSpacingBefore = <span class="number">22.0</span>f;<span class="comment">//段首行空白空间/* Distance between the bottom of the previous paragraph (or the end of its paragraphSpacing, if any) and the top of this paragraph. */</span></div><div class="line">paragraphStyle.baseWritingDirection = <span class="built_in">NSWritingDirectionLeftToRight</span>;<span class="comment">//从左到右的书写方向（一共➡️⬇️⬅️三种）</span></div><div class="line">paragraphStyle.lineHeightMultiple = <span class="number">15</span>;<span class="comment">/* Natural line height is multiplied by this factor (if positive) before being constrained by minimum and maximum line height. */</span></div><div class="line">paragraphStyle.hyphenationFactor = <span class="number">1</span>;<span class="comment">//连字属性 在iOS，唯一支持的值分别为0和1</span></div><div class="line"><span class="comment">//添加段落属性</span></div><div class="line">[aboutMutableAttributedstring addAttribute:<span class="built_in">NSParagraphStyleAttributeName</span> value:paragraphStyle range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, aboutMutableAttributedstring.length)];</div><div class="line"><span class="comment">//调整字间距</span></div><div class="line">[aboutMutableAttributedstring addAttribute:<span class="built_in">NSKernAttributeName</span> value:@(<span class="number">0.5</span>) range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, aboutMutableAttributedstring.length)];</div><div class="line"><span class="comment">//调整文本的基线位置</span></div><div class="line">[videoTextMutableAttributedstring addAttribute:<span class="built_in">NSBaselineOffsetAttributeName</span> value:@(<span class="number">-2.5</span>) range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, videoTextMutableAttributedstring.length)];</div></pre></td></tr></table></figure></p>
+<p>计算Label高度<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">CGRect</span> rect = [workDescriptionMutableAttributedstring boundingRectWithSize:<span class="built_in">CGSizeMake</span>(kScreenWidth<span class="number">-48</span>, MAXFLOAT) options:<span class="built_in">NSStringDrawingUsesLineFragmentOrigin</span> | <span class="built_in">NSStringDrawingUsesFontLeading</span> context:<span class="literal">nil</span>];</div><div class="line"><span class="keyword">return</span> ceilf(rect.size.height);</div></pre></td></tr></table></figure></p>
+<p>UILabel的其它属性<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//超出label边界文字的截取方式</span></div><div class="line">label1.lineBreakMode = <span class="built_in">UILineBreakModeTailTruncation</span>;</div><div class="line"></div><div class="line"><span class="comment">//截取方式有以下6种</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span> &#123;</div><div class="line"></div><div class="line"> <span class="built_in">UILineBreakModeWordWrap</span> = <span class="number">0</span>, 以空格为边界，保留整个单词</div><div class="line"></div><div class="line"> <span class="built_in">UILineBreakModeCharacterWrap</span>, 保留整个字符</div><div class="line"></div><div class="line"> <span class="built_in">UILineBreakModeClip</span>, 到边界为止</div><div class="line"></div><div class="line"> <span class="built_in">UILineBreakModeHeadTruncation</span>, 省略开始，以……代替</div><div class="line"></div><div class="line"> <span class="built_in">UILineBreakModeTailTruncation</span>, 省略结尾，以……代替</div><div class="line"></div><div class="line"> <span class="built_in">UILineBreakModeMiddleTruncation</span>,省略中间，以……代替，多行时作用于最后一行</div><div class="line"></div><div class="line"></div><div class="line">&#125; <span class="built_in">UILineBreakMode</span>;</div></pre></td></tr></table></figure></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//baselineAdjustment这个值控制文本的基线位置，只有文本行数为1是有效</span></div><div class="line"></div><div class="line">label1.baselineAdjustment = <span class="built_in">UIBaselineAdjustmentAlignCenters</span>;</div><div class="line"></div><div class="line"><span class="comment">//有三种方式</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span> &#123;</div><div class="line"></div><div class="line"> <span class="built_in">UIBaselineAdjustmentAlignBaselines</span> = <span class="number">0</span>, 默认值文本最上端于label中线对齐</div><div class="line"></div><div class="line"> <span class="built_in">UIBaselineAdjustmentAlignCenters</span>,<span class="comment">//文本中线于label中线对齐</span></div><div class="line"></div><div class="line"><span class="built_in">UIBaselineAdjustmentNone</span>,<span class="comment">//文本最低端与label中线对齐</span></div><div class="line"></div><div class="line">&#125; <span class="built_in">UIBaselineAdjustment</span>;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/27/UITextField格式化输入电话和银行卡/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学无止境">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/27/UITextField格式化输入电话和银行卡/" itemprop="url">
+                  UITextField格式化输入电话和银行卡
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-27 10:23:09" itemprop="dateCreated datePublished" datetime="2017-12-27T10:23:09+08:00">2017-12-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-24 17:01:49" itemprop="dateModified" datetime="2018-10-24T17:01:49+08:00">2018-10-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>直接上代码<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">BOOL</span>)textField:(<span class="built_in">UITextField</span> *)textField shouldChangeCharactersInRange:(<span class="built_in">NSRange</span>)range replacementString:(<span class="built_in">NSString</span> *)string &#123;</div><div class="line"></div><div class="line">    <span class="built_in">NSString</span> *text = [textField text];</div><div class="line"></div><div class="line">    <span class="built_in">NSCharacterSet</span> *characterSet = [<span class="built_in">NSCharacterSet</span> characterSetWithCharactersInString:<span class="string">@"0123456789\b"</span>];</div><div class="line"></div><div class="line">    string = [string stringByReplacingOccurrencesOfString:<span class="string">@" "</span> withString:<span class="string">@""</span>];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != <span class="built_in">NSNotFound</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">NO</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    text = [text stringByReplacingCharactersInRange:range withString:string];</div><div class="line">    text = [text stringByReplacingOccurrencesOfString:<span class="string">@" "</span> withString:<span class="string">@""</span>];</div><div class="line"></div><div class="line">    <span class="comment">// 如果是电话号码格式化，需要添加这三行代码</span></div><div class="line">    <span class="built_in">NSMutableString</span> *temString = [<span class="built_in">NSMutableString</span> stringWithString:text];</div><div class="line">    [temString insertString:<span class="string">@" "</span> atIndex:<span class="number">0</span>];</div><div class="line">    text = temString;</div><div class="line"></div><div class="line">    <span class="built_in">NSString</span> *newString = <span class="string">@""</span>;</div><div class="line">    <span class="keyword">while</span> (text.length &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="built_in">NSString</span> *subString = [text substringToIndex:MIN(text.length, <span class="number">4</span>)];</div><div class="line">        newString = [newString stringByAppendingString:subString];</div><div class="line">        <span class="keyword">if</span> (subString.length == <span class="number">4</span>) &#123;</div><div class="line">            newString = [newString stringByAppendingString:<span class="string">@" "</span>];</div><div class="line">        &#125;</div><div class="line">        text = [text substringFromIndex:MIN(text.length, <span class="number">4</span>)];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (newString.length &gt;= <span class="number">14</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">NO</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    [textField setText:newString];</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="literal">NO</span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这段代码是极好的：不但一个个输入字符时没有问题，而且可以实现，复制粘贴过来后再实现格式化</p>
 
           
@@ -488,17 +980,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -512,6 +1004,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -524,12 +1020,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/UITableView分割线的相关处理/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/27/UITableView分割线的相关处理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -544,11 +1046,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/27/UITableView分割线的相关处理/" itemprop="url">UITableView分割线的相关处理</a></h1>
+                <a class="post-title-link" href="/2017/12/27/UITableView分割线的相关处理/" itemprop="url">
+                  UITableView分割线的相关处理
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -556,13 +1068,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T10:16:55+08:00">
-                2017-12-27
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-27 10:16:55" itemprop="dateCreated datePublished" datetime="2017-12-27T10:16:55+08:00">2017-12-27</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-24 17:03:51" itemprop="dateModified" datetime="2018-10-24T17:03:51+08:00">2018-10-24</time>
+              
             
           </span>
 
@@ -578,11 +1107,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
 
                 
                 
@@ -607,6 +1132,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -615,32 +1143,32 @@
       
         
           
-            <h2 id="设置UITableView分割线的颜色和位置"><a href="#设置UITableView分割线的颜色和位置" class="headerlink" title="设置UITableView分割线的颜色和位置"></a>设置UITableView分割线的颜色和位置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//设置分割线的颜色</div><div class="line"></div><div class="line">_mainTableView.separatorColor = [UIColor colorWithNumber:DefaultLineColor];</div><div class="line"></div><div class="line">//设置分割线的位置</div><div class="line">- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath</div><div class="line">    if ([_mainTableView respondsToSelector:@selector(setSeparatorInset:)]) &#123;</div><div class="line">        [_mainTableView setSeparatorInset:UIEdgeInsetsZero];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if ([_mainTableView respondsToSelector:@selector(setLayoutMargins:)]) &#123;</div><div class="line">        [_mainTableView setLayoutMargins:UIEdgeInsetsZero];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath &#123;</div><div class="line">    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) &#123;</div><div class="line">    [cell setSeparatorInset:UIEdgeInsetsZero];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) &#123;</div><div class="line">    [cell setLayoutMargins:UIEdgeInsetsZero];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <h2 id="设置UITableView分割线的颜色和位置"><a href="#设置UITableView分割线的颜色和位置" class="headerlink" title="设置UITableView分割线的颜色和位置"></a>设置UITableView分割线的颜色和位置</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置分割线的颜色</span></div><div class="line"></div><div class="line">_mainTableView.separatorColor = [<span class="built_in">UIColor</span> colorWithNumber:DefaultLineColor];</div><div class="line"></div><div class="line"><span class="comment">//设置分割线的位置</span></div><div class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView willDisplayCell:(<span class="built_in">UITableViewCell</span> *)cell forRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">    <span class="keyword">if</span> ([_mainTableView respondsToSelector:<span class="keyword">@selector</span>(setSeparatorInset:)]) &#123;</div><div class="line">        [_mainTableView setSeparatorInset:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> ([_mainTableView respondsToSelector:<span class="keyword">@selector</span>(setLayoutMargins:)]) &#123;</div><div class="line">        [_mainTableView setLayoutMargins:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView willDisplayCell:(<span class="built_in">UITableViewCell</span> *)cell forRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</div><div class="line">    <span class="keyword">if</span> ([cell respondsToSelector:<span class="keyword">@selector</span>(setSeparatorInset:)]) &#123;</div><div class="line">    [cell setSeparatorInset:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> ([cell respondsToSelector:<span class="keyword">@selector</span>(setLayoutMargins:)]) &#123;</div><div class="line">    [cell setLayoutMargins:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="UITableView有footerView时最后一个cell不显示分割线问题"><a href="#UITableView有footerView时最后一个cell不显示分割线问题" class="headerlink" title="UITableView有footerView时最后一个cell不显示分割线问题"></a>UITableView有footerView时最后一个cell不显示分割线问题</h2><p>重写UITableViewCell子类的layoutSubviews方法</p>
-<p>使用Objective-C<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">- (void)layoutSubviews &#123;</div><div class="line">    [super layoutSubviews];</div><div class="line">    for (UIView *subview in self.contentView.superview.subviews) &#123;</div><div class="line">        if ([NSStringFromClass(subview.class) hasSuffix:@&quot;SeparatorView&quot;]) &#123;</div><div class="line">            subview.hidden = NO;</div><div class="line">            CGRect frame = subview.frame;</div><div class="line">            frame.origin.x += self.separatorInset.left;</div><div class="line">            frame.size.width -= self.separatorInset.right;</div><div class="line">            subview.frame =frame;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>使用Swift<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">override func layoutSubviews() &#123;</div><div class="line">    super.layoutSubviews()</div><div class="line">    for item in self.contentView.superview!.subviews &#123;</div><div class="line">    var subview = item as! UIView</div><div class="line">    if NSStringFromClass(subview.classForCoder).hasSuffix(&quot;SeparatorView&quot;) &#123;</div><div class="line">        subview.hidden = false</div><div class="line">            var frame = subview.frame</div><div class="line">            frame.origin.x += self.separatorInset.left</div><div class="line">            frame.size.width -= self.separatorInset.right</div><div class="line">            subview.frame  = frame</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="UITableViewCell的选中时的颜色自定义"><a href="#UITableViewCell的选中时的颜色自定义" class="headerlink" title="UITableViewCell的选中时的颜色自定义"></a>UITableViewCell的选中时的颜色自定义</h2><h4 id="1-系统默认的颜色设置"><a href="#1-系统默认的颜色设置" class="headerlink" title="1.系统默认的颜色设置"></a>1.系统默认的颜色设置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//无色  </div><div class="line">cell.selectionStyle = UITableViewCellSelectionStyleNone;  </div><div class="line">  </div><div class="line">//蓝色  </div><div class="line">cell.selectionStyle = UITableViewCellSelectionStyleBlue;  </div><div class="line">  </div><div class="line">//灰色  </div><div class="line">cell.selectionStyle = UITableViewCellSelectionStyleGray;</div></pre></td></tr></table></figure>
-<h4 id="2-自定义颜色和背景设置"><a href="#2-自定义颜色和背景设置" class="headerlink" title="2.自定义颜色和背景设置"></a>2.自定义颜色和背景设置</h4><p> 改变UITableViewCell选中时背景色：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">UIColor *color = [[UIColoralloc]initWithRed:0.0green:0.0blue:0.0alpha:1];</div><div class="line">//通过RGB来定义自己的颜色  </div><div class="line">cell.selectedBackgroundView = [[[UIView alloc] initWithFrame:cell.frame] autorelease];  </div><div class="line">cell.selectedBackgroundView.backgroundColor = [UIColor xxxxxx];</div></pre></td></tr></table></figure></p>
-<h4 id="3-自定义UITableViewCell选中时背景"><a href="#3-自定义UITableViewCell选中时背景" class="headerlink" title="3.自定义UITableViewCell选中时背景"></a>3.自定义UITableViewCell选中时背景</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// Customize the appearance of table view cells.  </div><div class="line">- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  </div><div class="line">&#123;  </div><div class="line">  if(0 == indexPath.row)  </div><div class="line">  &#123;  </div><div class="line">    cell.textLabel.textColor = ...;  </div><div class="line">    cell.textLabel.highlightedTextColor = ...;  </div><div class="line">  &#125;  </div><div class="line">  ...  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cell.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@&quot;cellart.png&quot;]] autorelease];</div></pre></td></tr></table></figure>
-<p>还有字体颜色<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cell.textLabel.highlightedTextColor = [UIColor xxxcolor];  [cell.textLabel setTextColor:color];//设置cell的字体的颜色</div></pre></td></tr></table></figure></p>
+<p>使用Objective-C<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)layoutSubviews &#123;</div><div class="line">    [<span class="keyword">super</span> layoutSubviews];</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">UIView</span> *subview <span class="keyword">in</span> <span class="keyword">self</span>.contentView.superview.subviews) &#123;</div><div class="line">        <span class="keyword">if</span> ([<span class="built_in">NSStringFromClass</span>(subview.class) hasSuffix:<span class="string">@"SeparatorView"</span>]) &#123;</div><div class="line">            subview.hidden = <span class="literal">NO</span>;</div><div class="line">            <span class="built_in">CGRect</span> frame = subview.frame;</div><div class="line">            frame.origin.x += <span class="keyword">self</span>.separatorInset.left;</div><div class="line">            frame.size.width -= <span class="keyword">self</span>.separatorInset.right;</div><div class="line">            subview.frame =frame;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>使用Swift<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">layoutSubviews</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="keyword">super</span>.layoutSubviews()</div><div class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> <span class="keyword">self</span>.contentView.superview!.subviews &#123;</div><div class="line">    <span class="keyword">var</span> subview = item <span class="keyword">as</span>! <span class="type">UIView</span></div><div class="line">    <span class="keyword">if</span> <span class="type">NSStringFromClass</span>(subview.classForCoder).hasSuffix(<span class="string">"SeparatorView"</span>) &#123;</div><div class="line">        subview.hidden = <span class="literal">false</span></div><div class="line">            <span class="keyword">var</span> frame = subview.frame</div><div class="line">            frame.origin.x += <span class="keyword">self</span>.separatorInset.<span class="keyword">left</span></div><div class="line">            frame.size.width -= <span class="keyword">self</span>.separatorInset.<span class="keyword">right</span></div><div class="line">            subview.frame  = frame</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="UITableViewCell的选中时的颜色自定义"><a href="#UITableViewCell的选中时的颜色自定义" class="headerlink" title="UITableViewCell的选中时的颜色自定义"></a>UITableViewCell的选中时的颜色自定义</h2><h4 id="1-系统默认的颜色设置"><a href="#1-系统默认的颜色设置" class="headerlink" title="1.系统默认的颜色设置"></a>1.系统默认的颜色设置</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//无色  </span></div><div class="line">cell.selectionStyle = <span class="built_in">UITableViewCellSelectionStyleNone</span>;  </div><div class="line">  </div><div class="line"><span class="comment">//蓝色  </span></div><div class="line">cell.selectionStyle = <span class="built_in">UITableViewCellSelectionStyleBlue</span>;  </div><div class="line">  </div><div class="line"><span class="comment">//灰色  </span></div><div class="line">cell.selectionStyle = <span class="built_in">UITableViewCellSelectionStyleGray</span>;</div></pre></td></tr></table></figure>
+<h4 id="2-自定义颜色和背景设置"><a href="#2-自定义颜色和背景设置" class="headerlink" title="2.自定义颜色和背景设置"></a>2.自定义颜色和背景设置</h4><p> 改变UITableViewCell选中时背景色：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">UIColor</span> *color = [[<span class="built_in">UIColoralloc</span>]initWithRed:<span class="number">0.0</span>green:<span class="number">0.0</span>blue:<span class="number">0.0</span>alpha:<span class="number">1</span>];</div><div class="line"><span class="comment">//通过RGB来定义自己的颜色  </span></div><div class="line">cell.selectedBackgroundView = [[[<span class="built_in">UIView</span> alloc] initWithFrame:cell.frame] autorelease];  </div><div class="line">cell.selectedBackgroundView.backgroundColor = [<span class="built_in">UIColor</span> xxxxxx];</div></pre></td></tr></table></figure></p>
+<h4 id="3-自定义UITableViewCell选中时背景"><a href="#3-自定义UITableViewCell选中时背景" class="headerlink" title="3.自定义UITableViewCell选中时背景"></a>3.自定义UITableViewCell选中时背景</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Customize the appearance of table view cells.  </span></div><div class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath  </div><div class="line">&#123;  </div><div class="line">  <span class="keyword">if</span>(<span class="number">0</span> == indexPath.row)  </div><div class="line">  &#123;  </div><div class="line">    cell.textLabel.textColor = ...;  </div><div class="line">    cell.textLabel.highlightedTextColor = ...;  </div><div class="line">  &#125;  </div><div class="line">  ...  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cell.selectedBackgroundView = [[[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"cellart.png"</span>]] autorelease];</div></pre></td></tr></table></figure>
+<p>还有字体颜色<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cell.textLabel.highlightedTextColor = [<span class="built_in">UIColor</span> xxxcolor];  [cell.textLabel setTextColor:color];<span class="comment">//设置cell的字体的颜色</span></div></pre></td></tr></table></figure></p>
 
           
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -654,6 +1182,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -666,12 +1198,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/22/iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/22/iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -686,11 +1224,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/22/iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏/" itemprop="url">iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏</a></h1>
+                <a class="post-title-link" href="/2017/12/22/iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏/" itemprop="url">
+                  iOS-navigationBar导航栏底部与self-view的分界线-横线-的隐藏
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -698,13 +1246,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T15:44:05+08:00">
-                2017-12-22
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-22 15:44:05" itemprop="dateCreated datePublished" datetime="2017-12-22T15:44:05+08:00">2017-12-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-24 17:02:57" itemprop="dateModified" datetime="2018-10-24T17:02:57+08:00">2018-10-24</time>
+              
             
           </span>
 
@@ -720,11 +1285,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
 
                 
                 
@@ -749,6 +1310,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -760,14 +1324,14 @@
             <p>ios开发中经常碰到各种需求，比如要求导航栏的颜色和self.view的颜色一样，当我们直接设置navigationBar的颜色和view一样时，我们会发现navigationBar还会有一条分割线留下，如下图：<br><img src="/images/ios_nav_line.png" alt="去除之前的图片"></p>
 <p>要去除这1px的横线，首先应该知道它是什么，在Xcode的界面调试中可以看到，它其实是UIImageView来的<br><img src="/images/ios_nav_line_3d.png" alt="导航栏横线"></p>
 <p>本文就是介绍怎么隐藏导航栏底部的分割线的。</p>
-<h3 id="第一种方法：不会影响导航栏translucent-半透明的显示"><a href="#第一种方法：不会影响导航栏translucent-半透明的显示" class="headerlink" title="第一种方法：不会影响导航栏translucent 半透明的显示"></a>第一种方法：不会影响导航栏translucent 半透明的显示</h3><p>首先在viewDidLoad 定义一个 UIImageView *navigationImageView 来存储底部分割线。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UIImageView *navigationImageView = [self findHairlineImageViewUnder:self.navigationController.navigationBar];</div><div class="line">self.navigationImageView = navigationImageView;</div></pre></td></tr></table></figure></p>
-<p>OC版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// 找到导航栏底部的横线</div><div class="line">- (UIImageView *)findHairlineImageViewUnder:(UIView *)view &#123;</div><div class="line">    </div><div class="line">    if ([view isKindOfClass:UIImageView.class] &amp;&amp; view.bounds.size.height &lt;= 1.0) &#123;</div><div class="line">        return (UIImageView *)view;</div><div class="line">    &#125;</div><div class="line">    for (UIView *subview in view.subviews) &#123;</div><div class="line">        UIImageView *imageView = [self findHairlineImageViewUnder:subview];</div><div class="line">        if (imageView) &#123;</div><div class="line">            return imageView;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return nil;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Swift版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"> /**</div><div class="line"> 隐藏导航底部黑线</div><div class="line"></div><div class="line"> - parameter view: self.navigationController?.navigationBar</div><div class="line"></div><div class="line"> - returns: 底部线的UIImageView</div><div class="line"> */</div><div class="line">func findHairlineImageViewUnder(view : UIView)-&gt;UIImageView!&#123;</div><div class="line"></div><div class="line">    if(view .isKindOfClass(UIImageView) &amp;&amp; view.bounds.size.height &lt;= 1.0 )&#123;</div><div class="line"></div><div class="line">        return view as! UIImageView</div><div class="line">    &#125;</div><div class="line">    for subview in view.subviews &#123;</div><div class="line"></div><div class="line">        let imageView = self .findHairlineImageViewUnder(subview)</div><div class="line"></div><div class="line">        if (imageView != nil) &#123;</div><div class="line">            return imageView</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return nil</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>在viewWillAppear隐藏分割线，在viewDidDisappear中显示分割线<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (void)viewWillAppear:(BOOL)animated &#123;</div><div class="line">    [super viewWillAppear:animated];</div><div class="line">    self.navigationImageView.hidden = YES;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)viewDidDisappear:(BOOL)animated &#123;</div><div class="line">    [super viewDidDisappear:animated];</div><div class="line">    self.navigationImageView.hidden = NO;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="第二种方法：会删除导航栏-translucent-半透明的显示。"><a href="#第二种方法：会删除导航栏-translucent-半透明的显示。" class="headerlink" title="第二种方法：会删除导航栏 translucent 半透明的显示。"></a>第二种方法：会删除导航栏 translucent 半透明的显示。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// @&quot;navImage&quot; 导航栏的颜色</div><div class="line">[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@&quot;navImage&quot;] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];</div><div class="line">    </div><div class="line">[self.navigationController.navigationBar setShadowImage:[UIImage new]];</div></pre></td></tr></table></figure>
-<h2 id="第三种方法："><a href="#第三种方法：" class="headerlink" title="第三种方法："></a>第三种方法：</h2><p>发现以上方法都太过繁琐，所以我把iOS10和之前版本的UINavigationBar的子试图的对象都打印了出来，如下：<br>iOS9<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">2016-12-02 12:31:39.201259 Demo[13948:3014909] &lt;_UIBarBackground: 0x10302ee80; frame = (0 -20; 375 64); userInteractionEnabled = NO; layer = &lt;CALayer: 0x17003ae80&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.202724 Demo[13948:3014909] &lt;UIImageView: 0x10302f270; frame = (0 64; 375 0.5); userInteractionEnabled = NO; layer = &lt;CALayer: 0x17003aec0&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.204211 Demo[13948:3014909] &lt;&lt;UINavigationItemView: 0x1030ef330; frame = (153 8; 69.5 27); opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x17023cd40&gt;&gt;: item=&lt;&lt;UINavigationItem: 0x1741d4be0&gt;: title:&apos;数据统计&apos;&gt; title=数据统计&gt;,UIView</div><div class="line">2016-12-02 12:31:39.205571 Demo[13948:3014909] &lt;UILabel: 0x103077180; frame = (0 3.5; 69.5 21.5); text = &apos;数据统计&apos;; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x17028c850&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.207938 Demo[13948:3014909] &lt;UIButton: 0x10dd195a0; frame = (1 2; 40 40); opaque = NO; layer = &lt;CALayer: 0x174428220&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:31:39.208315 Demo[13948:3014909] &lt;UIImageView: 0x1030e8270; frame = (5 5; 30 30); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x170421c20&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.208874 Demo[13948:3014909] &lt;UIButton: 0x103172720; frame = (295 0; 64 44); opaque = NO; layer = &lt;CALayer: 0x174430320&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:31:39.209393 Demo[13948:3014909] &lt;UIButtonLabel: 0x1031bc670; frame = (3.5 13.5; 57.5 17); text = &apos;数据说明&apos;; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x174287a80&gt;&gt;,UILabel</div><div class="line">2016-12-02 12:31:39.209964 Demo[13948:3014909] &lt;_UINavigationBarBackIndicatorView: 0x1031277c0; frame = (8 11.5; 13 21); alpha = 0; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x17403b7c0&gt;&gt;,UIImageView</div></pre></td></tr></table></figure></p>
-<p>iOS10<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">2016-12-02 12:33:59.139 Demo[512:301114] &lt;_UINavigationBarBackground: 0x13cdf4a60; frame = (0 -20; 320 64); autoresize = W; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdf4ed0&gt;&gt;,_UIBarBackgroundImageView</div><div class="line">2016-12-02 12:33:59.139 Demo[512:301114] &lt;UIImageView: 0x13cdf53f0; frame = (0 64; 320 0.5); userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdf55a0&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.141 Demo[512:301114] &lt;UINavigationItemView: 0x13e2c66f0; frame = (126 8; 68 27); opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13e058300&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.142 Demo[512:301114] &lt;UILabel: 0x13e532b30; frame = (0 3.5; 68 21.5); text = &apos;数据统计&apos;; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x13e2e9df0&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.142 Demo[512:301114] &lt;UIButton: 0x13e255d30; frame = (240 0; 64 44); opaque = NO; layer = &lt;CALayer: 0x13e236200&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:33:59.143 Demo[512:301114] &lt;UIButtonLabel: 0x13e2db400; frame = (4 13.5; 56 17); text = &apos;数据说明&apos;; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x13e04cad0&gt;&gt;,UILabel</div><div class="line">2016-12-02 12:33:59.144 Demo[512:301114] &lt;UIButton: 0x13e2d38e0; frame = (1 2; 40 40); opaque = NO; layer = &lt;CALayer: 0x13e202030&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:33:59.144 Demo[512:301114] &lt;UIImageView: 0x13e24ca40; frame = (5 5; 30 30); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdeec50&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.145 Demo[512:301114] &lt;_UINavigationBarBackIndicatorView: 0x13cdfa350; frame = (8 11.5; 13 21); alpha = 0; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdfa740&gt;&gt;,UIImageView</div></pre></td></tr></table></figure></p>
-<p>仔细研究后发现，iOS10只是把_UINavigationBarBackground（UIImageView的子类）改为了_UIBarBackground（UIView的子类）。这两个对象虽然不同，但是作用是一样的，他的Y值为-20，猜测作用应该是为了将NavigationBar延伸到状态栏下面。通过打印出来的顺序可以看到不管是_UINavigationBarBackground还是_UIBarBackground，他们都是在UINavigationBar的最底层，也就是最先被addSuview到父View上的。然后他们的唯一一个子View就是UIImageViewe类型的对象，并且该对象的高度就是0.5，可以确定就是分割线。<br>所以经过精简后，去掉导航栏分割线的代码就变成了下面这个样子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UIView *backgroundView = [self.navigationController.navigationBar subviews].firstObject;</div><div class="line">_navLine = backgroundView.subviews.firstObject;</div></pre></td></tr></table></figure></p>
+<h3 id="第一种方法：不会影响导航栏translucent-半透明的显示"><a href="#第一种方法：不会影响导航栏translucent-半透明的显示" class="headerlink" title="第一种方法：不会影响导航栏translucent 半透明的显示"></a>第一种方法：不会影响导航栏translucent 半透明的显示</h3><p>首先在viewDidLoad 定义一个 UIImageView *navigationImageView 来存储底部分割线。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">UIImageView</span> *navigationImageView = [<span class="keyword">self</span> findHairlineImageViewUnder:<span class="keyword">self</span>.navigationController.navigationBar];</div><div class="line"><span class="keyword">self</span>.navigationImageView = navigationImageView;</div></pre></td></tr></table></figure></p>
+<p>OC版本<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 找到导航栏底部的横线</span></div><div class="line">- (<span class="built_in">UIImageView</span> *)findHairlineImageViewUnder:(<span class="built_in">UIView</span> *)view &#123;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> ([view isKindOfClass:<span class="built_in">UIImageView</span>.class] &amp;&amp; view.bounds.size.height &lt;= <span class="number">1.0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> (<span class="built_in">UIImageView</span> *)view;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">UIView</span> *subview <span class="keyword">in</span> view.subviews) &#123;</div><div class="line">        <span class="built_in">UIImageView</span> *imageView = [<span class="keyword">self</span> findHairlineImageViewUnder:subview];</div><div class="line">        <span class="keyword">if</span> (imageView) &#123;</div><div class="line">            <span class="keyword">return</span> imageView;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Swift版本<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">/**</span></div><div class="line"> 隐藏导航底部黑线</div><div class="line"></div><div class="line"> - parameter view: self.navigationController?.navigationBar</div><div class="line"></div><div class="line"> - returns: 底部线的UIImageView</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">findHairlineImageViewUnder</span><span class="params">(view : UIView)</span></span>-&gt;<span class="type">UIImageView</span>!&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(view .isKindOfClass(<span class="type">UIImageView</span>) &amp;&amp; view.bounds.size.height &lt;= <span class="number">1.0</span> )&#123;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> view <span class="keyword">as</span>! <span class="type">UIImageView</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> subview <span class="keyword">in</span> view.subviews &#123;</div><div class="line"></div><div class="line">        <span class="keyword">let</span> imageView = <span class="keyword">self</span> .findHairlineImageViewUnder(subview)</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (imageView != <span class="literal">nil</span>) &#123;</div><div class="line">            <span class="keyword">return</span> imageView</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在viewWillAppear隐藏分割线，在viewDidDisappear中显示分割线<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewWillAppear:(<span class="built_in">BOOL</span>)animated &#123;</div><div class="line">    [<span class="keyword">super</span> viewWillAppear:animated];</div><div class="line">    <span class="keyword">self</span>.navigationImageView.hidden = <span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)viewDidDisappear:(<span class="built_in">BOOL</span>)animated &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidDisappear:animated];</div><div class="line">    <span class="keyword">self</span>.navigationImageView.hidden = <span class="literal">NO</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="第二种方法：会删除导航栏-translucent-半透明的显示。"><a href="#第二种方法：会删除导航栏-translucent-半透明的显示。" class="headerlink" title="第二种方法：会删除导航栏 translucent 半透明的显示。"></a>第二种方法：会删除导航栏 translucent 半透明的显示。</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// @"navImage" 导航栏的颜色</span></div><div class="line">[<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"navImage"</span>] forBarPosition:<span class="built_in">UIBarPositionAny</span> barMetrics:<span class="built_in">UIBarMetricsDefault</span>];</div><div class="line">    </div><div class="line">[<span class="keyword">self</span>.navigationController.navigationBar setShadowImage:[<span class="built_in">UIImage</span> new]];</div></pre></td></tr></table></figure>
+<h2 id="第三种方法："><a href="#第三种方法：" class="headerlink" title="第三种方法："></a>第三种方法：</h2><p>发现以上方法都太过繁琐，所以我把iOS10和之前版本的UINavigationBar的子试图的对象都打印了出来，如下：<br>iOS9<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">2016-12-02 12:31:39.201259 Demo[13948:3014909] &lt;_UIBarBackground: 0x10302ee80; frame = (0 -20; 375 64); userInteractionEnabled = NO; layer = &lt;CALayer: 0x17003ae80&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.202724 Demo[13948:3014909] &lt;UIImageView: 0x10302f270; frame = (0 64; 375 0.5); userInteractionEnabled = NO; layer = &lt;CALayer: 0x17003aec0&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.204211 Demo[13948:3014909] &lt;&lt;UINavigationItemView: 0x1030ef330; frame = (153 8; 69.5 27); opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x17023cd40&gt;&gt;: item=&lt;&lt;UINavigationItem: 0x1741d4be0&gt;: title:'数据统计'&gt; title=数据统计&gt;,UIView</div><div class="line">2016-12-02 12:31:39.205571 Demo[13948:3014909] &lt;UILabel: 0x103077180; frame = (0 3.5; 69.5 21.5); text = '数据统计'; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x17028c850&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.207938 Demo[13948:3014909] &lt;UIButton: 0x10dd195a0; frame = (1 2; 40 40); opaque = NO; layer = &lt;CALayer: 0x174428220&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:31:39.208315 Demo[13948:3014909] &lt;UIImageView: 0x1030e8270; frame = (5 5; 30 30); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x170421c20&gt;&gt;,UIView</div><div class="line">2016-12-02 12:31:39.208874 Demo[13948:3014909] &lt;UIButton: 0x103172720; frame = (295 0; 64 44); opaque = NO; layer = &lt;CALayer: 0x174430320&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:31:39.209393 Demo[13948:3014909] &lt;UIButtonLabel: 0x1031bc670; frame = (3.5 13.5; 57.5 17); text = '数据说明'; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x174287a80&gt;&gt;,UILabel</div><div class="line">2016-12-02 12:31:39.209964 Demo[13948:3014909] &lt;_UINavigationBarBackIndicatorView: 0x1031277c0; frame = (8 11.5; 13 21); alpha = 0; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x17403b7c0&gt;&gt;,UIImageView</div></pre></td></tr></table></figure></p>
+<p>iOS10<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">2016-12-02 12:33:59.139 Demo[512:301114] &lt;_UINavigationBarBackground: 0x13cdf4a60; frame = (0 -20; 320 64); autoresize = W; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdf4ed0&gt;&gt;,_UIBarBackgroundImageView</div><div class="line">2016-12-02 12:33:59.139 Demo[512:301114] &lt;UIImageView: 0x13cdf53f0; frame = (0 64; 320 0.5); userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdf55a0&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.141 Demo[512:301114] &lt;UINavigationItemView: 0x13e2c66f0; frame = (126 8; 68 27); opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13e058300&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.142 Demo[512:301114] &lt;UILabel: 0x13e532b30; frame = (0 3.5; 68 21.5); text = '数据统计'; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x13e2e9df0&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.142 Demo[512:301114] &lt;UIButton: 0x13e255d30; frame = (240 0; 64 44); opaque = NO; layer = &lt;CALayer: 0x13e236200&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:33:59.143 Demo[512:301114] &lt;UIButtonLabel: 0x13e2db400; frame = (4 13.5; 56 17); text = '数据说明'; opaque = NO; userInteractionEnabled = NO; layer = &lt;_UILabelLayer: 0x13e04cad0&gt;&gt;,UILabel</div><div class="line">2016-12-02 12:33:59.144 Demo[512:301114] &lt;UIButton: 0x13e2d38e0; frame = (1 2; 40 40); opaque = NO; layer = &lt;CALayer: 0x13e202030&gt;&gt;,UIControl</div><div class="line">2016-12-02 12:33:59.144 Demo[512:301114] &lt;UIImageView: 0x13e24ca40; frame = (5 5; 30 30); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdeec50&gt;&gt;,UIView</div><div class="line">2016-12-02 12:33:59.145 Demo[512:301114] &lt;_UINavigationBarBackIndicatorView: 0x13cdfa350; frame = (8 11.5; 13 21); alpha = 0; opaque = NO; userInteractionEnabled = NO; layer = &lt;CALayer: 0x13cdfa740&gt;&gt;,UIImageView</div></pre></td></tr></table></figure></p>
+<p>仔细研究后发现，iOS10只是把_UINavigationBarBackground（UIImageView的子类）改为了_UIBarBackground（UIView的子类）。这两个对象虽然不同，但是作用是一样的，他的Y值为-20，猜测作用应该是为了将NavigationBar延伸到状态栏下面。通过打印出来的顺序可以看到不管是_UINavigationBarBackground还是_UIBarBackground，他们都是在UINavigationBar的最底层，也就是最先被addSuview到父View上的。然后他们的唯一一个子View就是UIImageViewe类型的对象，并且该对象的高度就是0.5，可以确定就是分割线。<br>所以经过精简后，去掉导航栏分割线的代码就变成了下面这个样子。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">UIView</span> *backgroundView = [<span class="keyword">self</span>.navigationController.navigationBar subviews].firstObject;</div><div class="line">_navLine = backgroundView.subviews.firstObject;</div></pre></td></tr></table></figure></p>
 <p>经过测试，在iOS10和iOS9上都可以隐藏分割线。</p>
 
           
@@ -775,17 +1339,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -799,6 +1363,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -811,12 +1379,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/22/iOS给UIView-加阴影加圆角加边框/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/22/iOS给UIView-加阴影加圆角加边框/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -831,11 +1405,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/22/iOS给UIView-加阴影加圆角加边框/" itemprop="url">iOS给UIView 加阴影加圆角加边框</a></h1>
+                <a class="post-title-link" href="/2017/12/22/iOS给UIView-加阴影加圆角加边框/" itemprop="url">
+                  iOS给UIView 加阴影加圆角加边框
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -843,13 +1427,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T15:44:05+08:00">
-                2017-12-22
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-22 15:44:05" itemprop="dateCreated datePublished" datetime="2017-12-22T15:44:05+08:00">2017-12-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-24 17:03:06" itemprop="dateModified" datetime="2018-10-24T17:03:06+08:00">2018-10-24</time>
+              
             
           </span>
 
@@ -865,11 +1466,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
 
                 
                 
@@ -894,6 +1491,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -902,27 +1502,27 @@
       
         
           
-            <p>1.加阴影,首先导入框架#import<quartzcore quartzcore=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">self.bootomView.layer.shadowOpacity = 0.5;// 阴影透明度</div><div class="line">self.bootomView.layer.shadowColor = [UIColor grayColor].CGColor;// 阴影的颜色</div><div class="line">self.bootomView.layer.shadowRadius = 3;// 阴影扩散的范围控制</div><div class="line">self.bootomView.layer.shadowOffset  = CGSizeMake(1, 1);// 阴影的范围</div></pre></td></tr></table></figure></quartzcore></p>
-<p>2.加圆角，首先保证你的imageVIew是正方形的，要不然效果不是圆的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self.userImage.layer.masksToBounds = YES;</div><div class="line">self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2;</div></pre></td></tr></table></figure></p>
-<p>如果想要有点弧度的不是地球那么圆的可以设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">self.userImage.layer.cornerRadius =5；这个值越大弧度越大</div></pre></td></tr></table></figure></p>
-<p>3.加边框<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self.goingButn.layer.borderColor = [UIColor redColor].CGColor;//边框颜色</div><div class="line">self.goingButn.layer.borderWidth = 2;//边框宽度</div></pre></td></tr></table></figure></p>
+            <p>1.加阴影,首先导入框架#import<quartzcore quartzcore=""><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.bootomView.layer.shadowOpacity = <span class="number">0.5</span>;<span class="comment">// 阴影透明度</span></div><div class="line"><span class="keyword">self</span>.bootomView.layer.shadowColor = [<span class="built_in">UIColor</span> grayColor].CGColor;<span class="comment">// 阴影的颜色</span></div><div class="line"><span class="keyword">self</span>.bootomView.layer.shadowRadius = <span class="number">3</span>;<span class="comment">// 阴影扩散的范围控制</span></div><div class="line"><span class="keyword">self</span>.bootomView.layer.shadowOffset  = <span class="built_in">CGSizeMake</span>(<span class="number">1</span>, <span class="number">1</span>);<span class="comment">// 阴影的范围</span></div></pre></td></tr></table></figure></quartzcore></p>
+<p>2.加圆角，首先保证你的imageVIew是正方形的，要不然效果不是圆的<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.userImage.layer.masksToBounds = <span class="literal">YES</span>;</div><div class="line"><span class="keyword">self</span>.userImage.layer.cornerRadius = <span class="keyword">self</span>.userImage.frame.size.width / <span class="number">2</span>;</div></pre></td></tr></table></figure></p>
+<p>如果想要有点弧度的不是地球那么圆的可以设置<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.userImage.layer.cornerRadius =<span class="number">5</span>；这个值越大弧度越大</div></pre></td></tr></table></figure></p>
+<p>3.加边框<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.goingButn.layer.borderColor = [<span class="built_in">UIColor</span> redColor].CGColor;<span class="comment">//边框颜色</span></div><div class="line"><span class="keyword">self</span>.goingButn.layer.borderWidth = <span class="number">2</span>;<span class="comment">//边框宽度</span></div></pre></td></tr></table></figure></p>
 
           
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -936,6 +1536,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -948,12 +1552,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/18/Hexo下的分类和标签无法显示解决方法/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/18/Hexo下的分类和标签无法显示解决方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -968,11 +1578,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/18/Hexo下的分类和标签无法显示解决方法/" itemprop="url">Hexo下的分类和标签无法显示解决方法</a></h1>
+                <a class="post-title-link" href="/2017/12/18/Hexo下的分类和标签无法显示解决方法/" itemprop="url">
+                  Hexo下的分类和标签无法显示解决方法
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -980,13 +1600,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T12:37:04+08:00">
-                2017-12-18
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-18 12:37:04 / 修改时间：12:01:58" itemprop="dateCreated datePublished" datetime="2017-12-18T12:37:04+08:00">2017-12-18</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1002,11 +1627,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
 
                 
                 
@@ -1031,6 +1652,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1054,17 +1678,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1078,6 +1702,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1090,12 +1718,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/Hexo报错之Node-js版本更新/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/17/Hexo报错之Node-js版本更新/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1110,11 +1744,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/17/Hexo报错之Node-js版本更新/" itemprop="url">Hexo报错之Node.js版本更新</a></h1>
+                <a class="post-title-link" href="/2017/12/17/Hexo报错之Node-js版本更新/" itemprop="url">
+                  Hexo报错之Node.js版本更新
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1122,13 +1766,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-17T16:34:56+08:00">
-                2017-12-17
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-17 16:34:56" itemprop="dateCreated datePublished" datetime="2017-12-17T16:34:56+08:00">2017-12-17</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-24 17:00:46" itemprop="dateModified" datetime="2018-10-24T17:00:46+08:00">2018-10-24</time>
+              
             
           </span>
 
@@ -1144,11 +1805,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
 
                 
                 
@@ -1173,6 +1830,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1193,17 +1853,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1217,6 +1877,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1229,12 +1893,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/Git提交文件忽略-DS-Store文件/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://learneryql.github.io/2017/12/17/Git提交文件忽略-DS-Store文件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="learneryql">
+      <meta itemprop="description" content="不知所云">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1249,11 +1919,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/17/Git提交文件忽略-DS-Store文件/" itemprop="url">Git提交文件忽略.DS_Store文件</a></h1>
+                <a class="post-title-link" href="/2017/12/17/Git提交文件忽略-DS-Store文件/" itemprop="url">
+                  Git提交文件忽略.DS_Store文件
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1261,13 +1941,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-17T15:38:50+08:00">
-                2017-12-17
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-17 15:38:50 / 修改时间：15:49:11" itemprop="dateCreated datePublished" datetime="2017-12-17T15:38:50+08:00">2017-12-17</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1283,11 +1968,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧教程/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技巧教程/" itemprop="url" rel="index"><span itemprop="name">技巧教程</span></a></span>
 
                 
                 
@@ -1312,6 +1993,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1334,17 +2018,17 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1358,184 +2042,10 @@
         <div class="post-eof"></div>
       
     </footer>
-  </article>
-
-
-    
-      
-
-  
-
+  </div>
   
   
   
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/06/构建静态博客之HEXO/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Learner YQL">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="学无止境">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/06/构建静态博客之HEXO/" itemprop="url">构建静态博客之HEXO</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-06T00:00:00+08:00">
-                2017-07-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具使用/" itemprop="url" rel="index">
-                    <span itemprop="name">工具使用</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1-Hexo介绍"><a href="#1-Hexo介绍" class="headerlink" title="1. Hexo介绍"></a>1. Hexo介绍</h2><p>Hexo 是一个简单地、轻量地、基于Node的一个静态博客框架。通过Hexo我们可以快速创建自己的博客，仅需要几条命令就可以完成。</p>
-<p>发布时，Hexo可以部署在自己的Node服务器上面，也可以部署github上面。对于个人用户来说，部署在github上好处颇多，不仅可以省去服务器的成本，还可以减少各种系统运维的麻烦事(系统管理、备份、网络)。所以，基于github的个人站点，正在开始流行起来….</p>
-<p>Hexo的官方网站：<a href="http://hexo.io/" target="_blank" rel="noopener">http://hexo.io/</a> ，也是基于Github构建的网站。</p>
-<h2 id="2-Hexo安装"><a href="#2-Hexo安装" class="headerlink" title="2. Hexo安装"></a>2. Hexo安装</h2><ul>
-<li>首先需要NodeJs环境搭建，只要下载并安装NodeJs就OK了，<a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJs官网下载</a>。</li>
-<li><p>Hexo安装，要用全局安装，加-g参数。<br>使用下面的命令安装Hexo:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo-cli</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看是否安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo version</div></pre></td></tr></table></figure>
-</li>
-<li><p>初始化工程目录(<yourfolder>替换为自己的工程名字，这里我创建了一个learneryql的工程)：</yourfolder></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init learneryql</div></pre></td></tr></table></figure>
-</li>
-<li><p>一些常用命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help #查看帮助</div></pre></td></tr></table></figure>
-</li>
-<li><p>进入目录(learneryql)，并启动Hexo服务器。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd learneryql</div><div class="line">hexo server</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>最后看到控制台输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[info] Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure></p>
-<p>  这时端口4000被打开了，我们能过浏览器打开地址，<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 。出现了默认的网页界面，是不是很容易呢！</p>
-<h2 id="3-Hexo的使用"><a href="#3-Hexo的使用" class="headerlink" title="3. Hexo的使用"></a>3. Hexo的使用</h2><p>接下来，我们要对Hexo做更全面的了解，才能做出个性化一的博客。</p>
-<h5 id="3-1-目录和文件"><a href="#3-1-目录和文件" class="headerlink" title="3.1 目录和文件"></a>3.1 目录和文件</h5><p>先来看一下，默认生成了哪些东西。<br><img src="/images/learneryql_hexo.png" alt="Hexo生成的目录结构"><br>scaffolds - 脚手架，也就是一个工具模板<br>scripts - 写文件的js，扩展hexo的功能<br>source - 存放博客正文内容<br>source/_drafts - 草稿箱<br>source/_posts - 文件箱<br>themes - 存放皮肤的目录<br>themes/landscape - 默认的皮肤<br>_config.yml - 全局的配置文件<br>db.json - 静态常量<br>在这里，我们每次用到的就是_posts目录里的文件，而_config.yml文件和themes目录是第一次配置好就行了。</p>
-<p>_posts目录：Hexo是一个静态博客框架，因此没有数据库。文章内容都是以文本文件方式进行存储的，直接存储在_posts的目录。Hexo天生集成了markdown，我们可以直接使用markdown语法格式写博客，例如:hello-world.md。新增加一篇文章，就在_posts目录，新建一个xxx.md的文件。</p>
-<p>themes目录：是存放皮肤的，包括一套Javascript+CSS样式和基于EJS的模板设置。通过在themes目录下，新建一个子目录，就可以创建一套新的皮肤，当然我们也可以直接在landscape上面修改。</p>
-<h5 id="3-2-全局配置"><a href="#3-2-全局配置" class="headerlink" title="3.2 全局配置"></a>3.2 全局配置</h5><p>_config.yml是全局的配置文件：很多的网站配置都在这个文件中定义。</p>
-<p>站点信息: 定义标题，作者，语言<br>URL: URL访问路径<br>文件目录: 正文的存储目录<br>写博客配置：文章标题，文章类型，外部链接等<br>目录和标签：默认分类，分类图，标签图<br>归档设置：归档的类型<br>服务器设置：IP，访问端口，日志输出<br>时间和日期格式： 时间显示格式，日期显示格式<br>分页设置：每页显示数量<br>评论：外挂的Disqus评论系统<br>插件和皮肤：换皮肤，安装插件<br>Markdown语言：markdown的标准<br>CSS的stylus格式：是否允许压缩<br>部署配置：github发布</p>
-<h5 id="3-4-创建新文章"><a href="#3-4-创建新文章" class="headerlink" title="3.4 创建新文章"></a>3.4 创建新文章</h5><p>接下来，我们开始新博客了，创建第一博客文章。Hexo建议通过命令行操作，当然你也可以直接在_posts目录下创建文件。</p>
-<p>通过命令创建新文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new 构建静态博客之HEXO</div></pre></td></tr></table></figure></p>
-<p>在_posts目录下，就会生成文件：”构建静态博客之HEXO.md”。<br>然后，我们编辑文件：”构建静态博客之HEXO.md”，以markdown语法写文章，然后保存。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 构建静态博客之HEXO.md</div><div class="line">date: 2017-07-06</div><div class="line">tags:</div><div class="line">- hexo</div><div class="line">- github博客</div><div class="line">categories: 工具使用</div><div class="line">---</div><div class="line">这是**构建静态博客之HEXO**，我用hexo创建了第一篇文章。</div><div class="line">通过下面的命令，就可以创建新文章</div><div class="line">``````&#123;bash&#125;</div><div class="line">hexo new 构建静态博客之HEXO</div><div class="line">```</div></pre></td></tr></table></figure>
-<p>感觉非常好。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">在命令行，启动服务器。</div><div class="line">```&#123;bash&#125;</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
-<p>通过浏览器打开， <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，就出现了我们新写的文章。<br><img src="/images/learneryql_page_demo.png" alt="构建静态博客之HEXO"></p>
-<p><a href="">markdown语法的学习</a></p>
-<h2 id="4-发布到项目到github"><a href="#4-发布到项目到github" class="headerlink" title="4. 发布到项目到github"></a>4. 发布到项目到github</h2><h5 id="4-1-静态化处理"><a href="#4-1-静态化处理" class="headerlink" title="4.1 静态化处理"></a>4.1 静态化处理</h5><p>写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。</p>
-<p>静态化命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
-<p>在本地目录下，会生成一个public的目录，里面包括了所有静态化的文件。</p>
-<h5 id="4-2-发布到github"><a href="#4-2-发布到github" class="headerlink" title="4.2 发布到github"></a>4.2 发布到github</h5><p>接下来，我们把这个博客发布到github。</p>
-<p>在github中创建一个项目learneryql<br>项目地址：<a href="https://github.com/learneryql/learneryql.github.io.git。" target="_blank" rel="noopener">https://github.com/learneryql/learneryql.github.io.git。</a></p>
-<p>编辑全局配置文件：_config.yml，找到deploy的部分，设置github的项目地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: github</div><div class="line">  repo: https://github.com/learneryql/learneryql.github.io.git</div></pre></td></tr></table></figure></p>
-<p>然后，通过命令进行部署。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
-<p>看到控制台最后输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[info] Deploy done: github</div></pre></td></tr></table></figure></p>
-<p>说明这个静态的web网站就被部署到了github，检查一下分支是gh-pages。gh-pages是github为了web项目特别设置的分支。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </article>
 
 
@@ -1543,12 +2053,13 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1564,72 +2075,118 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="Learner YQL" />
-          <p class="site-author-name" itemprop="name">Learner YQL</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="learneryql" />
+            
+              <p class="site-author-name" itemprop="name">learneryql</p>
+              <p class="site-description motion-element" itemprop="description">不知所云</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/learneryql" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/learneryql" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -1646,30 +2203,41 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Learner YQL</span>
+  <span class="author" itemprop="copyrightHolder">learneryql</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.3</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.2</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -1682,6 +2250,11 @@
       </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -1700,91 +2273,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
 
 
 
@@ -1797,12 +2285,92 @@
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
   
 
 
 
 
 
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
   
 
   
